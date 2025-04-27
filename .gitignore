@@ -1,4 +1,4 @@
 *.ipynb_checkpoints
-# sbi-logs/
+sbi-logs/
 
 data/trts_data_with_errors.npz
