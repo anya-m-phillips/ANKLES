@@ -1,6 +1,6 @@
 ## ``ANKLES``: *A*mortized *N*ormalizing flows for *K*eplerian orbita*L* *E*stimation with *S*BI
 
-This is work in progress for a class. 
+A glorified blog post: 
 
 `ANKLES` is a simulation-based inference (SBI) model to estimate the Keplerian orbital parameters $v_0, K, \omega, \phi_0, e, P$ from the radial velocity curves of single-lined spectroscopic binaries ("SB*1*s"... not to be confused with SBI...)
 
