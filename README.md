@@ -13,24 +13,32 @@ Basically, no ELBOs here, only `ANKLES` ;)
 
 __python__:
 
+`ANKLES.py` : functions for end-to-end inference from un-normalized inputs to un-normalized posteriors given a path to an SBI model.
+
+`priors.py` : the KDEprior object that ANKLES needs to generate posteriors
+
+`demo.ipynb` : demonstration of using `ANKLES.py` to generate posteriors on your new data.
+
 `generate_data_with_COSMIC.ipynb` : exactly what it sounds like. generating the train/test data using a binary population from the `COSMIC` code ([Breivik et al. 2020](https://ui.adsabs.harvard.edu/abs/2020ApJ...898...71B/abstract)).
 
 `train_baseline.ipynb` : train a "vanilla" MLP to estimate orbital parameters. It just does OK, and we show the need for probabilistic methods. Resulting MLP is stored in `models/`.
 
 `train_SBI.ipynb` : Where I initially trained the SBI. Resulting model is stored in `models/`. 
 
-`ankles.py` : (to be written) end-to-end inference from un-normalized inputs to un-normalized posteriors for ease of use.
 
-`demo.ipynb` : (to be written) demonstration of using `ankles.py` to generate posteriors on your new data.
 
 __etc etc__:
 
-`data/` : stores training/test data. Note, my training data is too large to upload to github. The binary table output by `COSMIC` is stored in this directory, and running the cells below the cosmic cell in the `generate_data_with_COSMIC` notebook, you can generate your own train/test files. 
+`data/` - stores training/test data. Note, my training data is too large to upload to github.
+1. `cosmic_ibt.csv` :  The binary table output by `COSMIC`. Running the cells below the cosmic cell in the `generate_data_with_COSMIC` notebook, you can generate your own train/test files 
+2. `normed_labels.npz` : just the labels of the train/test data. These are smoothed into a KDEprior for SBI to use in sampling/training.
 
-`models/` : store trained models:
+
+`models/` - store trained models:
 1. `baseline_MLP.pth` : a vanilla multilayer perceptron 
 2. `sbi_model.pt` : a test SBI model that trained for 1000 epochs on 5e4 data points and did not converge
 3. `sbi_model_longtraining.pt` : the "final" SBI Model that trained for 1127 epochs and *did* converge.
+4. `training_extrema_sbi.npz` : the min/max values of model parameters used to train the sbi models. these are called in ANKLES.py to un-normalize outputs.
 
 
-`plots/` : plots for class poster/paper
+`plots/` - plots for astronomy 205 poster/paper
