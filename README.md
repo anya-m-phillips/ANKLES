@@ -6,7 +6,8 @@ The goal is probabilistic estimates of the orbital parameters, which typically a
 
 Basically, no ELBOs here, only `ANKLES` ;)
 
-![image](plots/machine_learns.png)
+<!-- ![image](plots/machine_learns.png) -->
+<img src="plots/machine_learns.jpg" alt="a machine learns" width="200"/>
 
 ### What is in this repository? 
 
