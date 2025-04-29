@@ -1,13 +1,12 @@
 ## ``ANKLES``: *A*mortized *N*ormalizing flows for *K*eplerian orbita*L* *E*stimation with *S*BI
 
-A glorified blog post: 
-
 `ANKLES` is a simulation-based inference (SBI) model to estimate the Keplerian orbital parameters $v_0, K, \omega, \phi_0, e, P$ from the radial velocity curves of single-lined spectroscopic binaries ("SB*1*s"... not to be confused with SBI...)
 
 The goal is probabilistic estimates of the orbital parameters, which typically are achieved with time-consuming stochastic sampling techniques (e.g., [Price-Whelan et al. 2017](https://ui.adsabs.harvard.edu/abs/2017ApJ...837...20P/abstract)). One could implement an amortized variational inference network, but this requires expensive likelihood calculations to optimize during training using the Evidence Lower Bound (ELBo). Since RV curves are easy to forward model, we can generate a realistic simulated training set and, with SBI, circumvent the need for likelihood calculations.
 
 Basically, no ELBOs here, only `ANKLES` ;)
 
+![image](plots/machine_learns.png)
 
 ### What is in this repository? 
 
