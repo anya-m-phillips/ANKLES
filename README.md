@@ -9,6 +9,17 @@ Basically, no ELBOs here, only `ANKLES` ;)
 ![image](plots/machine_learns.png)
 <!-- <img src="plots/machine_learns.jpg" alt="a machine learns" width="200"/> -->
 
+
+### To-do list
+
+I may have learned a lot so far but the machine has not learned nearly enough...
+
+- [x] Deliver a mediocre poster presentation
+- [ ] Train a model with RV curves that only have 3 visits (more plausible observing strategy)
+- [ ] Train with _many_ more points (~1e6 as opposed to current 5e4)
+- [ ] Train a model that "focuses" on shorter-period training data (from based on current model performance, less than P~1e3 or 4 days)
+
+
 ### What is in this repository? 
 
 __python__:
